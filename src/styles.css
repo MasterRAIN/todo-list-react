@@ -1,0 +1,218 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+	background: #ebebeb;
+}
+ion-icon {
+	font-size: 20px;
+}
+.active {
+	color: white !important;
+	background: #06a4d9d3 !important;
+	animation-name: buttonAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;	
+}
+.completed label {
+	border-color: rgba(0, 176, 0, 0.534);
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.completed label:hover {
+	border-color: #06A6D9;
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.completed label span {
+	transform: translate(10px);
+}
+.completed label:hover span {
+	transform: translate(0);
+}
+.completed label:hover .check-mark {
+	width: 0;
+}
+.check-icon {
+	width: 0;
+	opacity: 0;
+}
+.check-mark {
+	color: green;
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.app-title {
+	text-align: center;
+	color: #353436;
+	font-size: 200%;
+}
+.todo-app-wrapper {
+	height: 600px;
+	width: 600px;
+	margin: 5% auto;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	padding: 50px 60px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.new-item-form {
+	width: 100%;
+	margin-bottom: 5px;
+	color: #353436;
+}
+.lbl-task {
+	font-size: 250%;
+}
+.task-wrapper {
+	display: grid;
+	grid-template-columns: 10fr 1fr;
+}
+.input-text {
+	outline: none;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #06A6D9;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.input-text:hover {
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.input-text:focus {
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.btn-add {
+	height: 40px;
+	text-decoration: none;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background: #06A6D9;
+	color: white;
+	cursor: pointer;
+	display: grid;
+	place-content: center;
+}
+.btn-add:hover {
+	background: #06a4d9d3;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.header {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.header button {
+	height: 40px;
+	border: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	color: #06a4d9d3;
+	background: none;
+}
+.header button:hover {
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.header h3 {
+	text-align: center;
+}
+.notodos {
+	text-align: center;
+	padding: 10px 0;
+	color: #35343680;
+}
+.form-row {
+	display: flex;
+	flex-direction: column;
+}
+ul {
+	min-height: 360px;
+	max-height: 360px;
+	min-width: 100%;
+	padding: 0;
+	overflow: auto;
+	border-bottom: 1px solid #06a4d9d3;
+}
+li {
+	height: 40px;
+	list-style-type: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 10fr 1fr;
+	margin-bottom: 5px;
+}
+li label {
+	outline: none;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #06A6D9;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+li label:hover {
+	border-color: rgba(0, 176, 0, 0.534);
+}
+.todo label:hover .check-icon {
+	width: 20px;
+	opacity: 1;
+}
+.todo.checked {
+  transform: translateX(-20px); 
+  transition: transform 0.3s ease;
+}
+li label span {
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+li label:hover span {
+	transform: translate(10px);
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+li button {
+	text-decoration: none;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background: #cb202080;
+	color: white;
+	cursor: pointer;
+	display: grid;
+	place-content: center;
+}
+li button:hover {
+	background: #cb20206e;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	transition: all 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+li label {
+	display: flex;
+	align-items: center;
+}
+li label input {
+	display: none;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1); /* Initial scale value */
+  }
+  50% {
+    transform: scale(1.02); /* Intermediate scale value */
+  }
+  100% {
+    transform: scale(1); /* Final scale value */
+  }
+}

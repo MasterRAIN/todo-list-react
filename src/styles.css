@@ -53,7 +53,7 @@ ion-icon {
 	font-size: 200%;
 }
 .todo-app-wrapper {
-	height: 600px;
+	height: auto;
 	width: 600px;
 	margin: 5% auto;
 	border-radius: 5px;
@@ -215,4 +215,17 @@ li label input {
   100% {
     transform: scale(1); /* Final scale value */
   }
+}
+
+@media only screen and (max-width: 640px) {
+	.todo-app-wrapper {
+		width: 90%;
+		padding: 50px 8%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.todo-app-wrapper {
+		padding: 5%;
+	}
 }
